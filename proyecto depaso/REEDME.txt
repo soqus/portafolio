@@ -1,0 +1,2 @@
+Pagina creada para una compañia de teatro llamada  "De Paso"
+Para poder visualizar la pagina web solo se debe hacer doble click en index.html

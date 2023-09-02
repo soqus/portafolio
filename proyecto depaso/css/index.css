@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url(/images/DONDON\ BANNER.jpg);
+    background-repeat: repeat;
+
+    
+}
+
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  background-color: rgba(255, 255, 255, 0); /* Cambia el valor de opacidad según lo necesites */
+  z-index: -1; /* Colocar el pseudo-elemento detrás del contenido del body */
+}
+
+h1{
+    color: white;
+    padding-right: 20%;
+    font-family: stencil;
+    letter-spacing: 8px;    
+}
+span{
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-family: stencil;
+}
+/*[--menu superior--]*/
+header {
+    height: 10vh;
+    /* 10% de la altura de la ventana gráfica */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #202020; /* Color de fondo del menú */
+    padding: 0 20px;
+    /* Espacio interno alrededor del contenido */
+}
+
+.logo {
+    flex: 1;
+    /* El logo ocupa todo el espacio posible */
+}
+
+.logo img {
+    padding-top: 1%;
+    height: 5rem;
+    /* El logo se ajusta a la altura del menú */
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+    /* Espacio entre los enlaces */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    /* Color del texto de los enlaces */
+}
+img{
+  height: 500px;
+  width: auto;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+  
+}
+.afiche-container{
+
+  flex: 1;
+  margin: 1% 0% 1% 5%;
+}
+
+.entradas{
+  color: #ffffff;
+  font-size: 25px;
+  margin-left: 10%;
+  font-style: italic;
+  
+}
+.entradas:hover{
+  color: blue;
+  font-size: 26px;
+}
+
+
+/*[--carrusel--]*/
+.carrusel-container{
+  flex: 3;
+  width: 50%;
+}
+.carrusel {
+    padding-top: 1%;
+    height: 70%;
+    width: 50%;
+    max-width: 1200px; /* Puedes ajustar el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centrar horizontalmente */
+    overflow: hidden; /* Ocultar desbordamiento */
+    margin-top: 20px;
+  }
+  
+  .slide {
+    display: none; /* Ocultar los slides por defecto */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    border: solid 2px black;
+  }
+  p{
+    color: rgb(255, 255, 255);
+    text-align:center;
+    padding-top: 1%;
+    padding-left: 2%;
+    font-size: 25px;
+    font-style: italic;
+    font-weight:bolder;
+  }
+  #gorra{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2%;
+  }
+
+  #video{
+    margin-top: 5%;
+  }
+
+  /*[--Footer--]*/
+
+  footer {
+    background-color: #202020;
+    color: #ffffff;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 ;
+    z-index: 100;
+  }
+  
+  .redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .redes-sociales img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .derechos-reservados {
+    display: flex;
+    align-items: center;
+  }
+  
+  .derechos-reservados span {
+    margin-right: 9px;
+    font-size: 14px;
+  }
+  
+  .derechos-reservados span:last-child {
+    font-size: 12px;
+  }
+
+
+
+/* Estilos para hacerlo responsivo */
+@media (max-width: 768px) {
+    /*[--Menu superior--]*/
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        padding-top: 3%;
+    }
+    h1{
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+    body{
+      background-image: url(/images/DONDON\ BANNER.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .logo {
+        padding-top: 4%;
+        margin-bottom: 10px;
+        margin-left: 42%;
+    }
+
+    nav {
+        order: -1;
+        /* Colocar la navegación arriba en dispositivos pequeños */
+    }
+
+    /*[--carrusel--]*/
+    .carrusel {
+        padding-top: 5%;
+        width: 90%;
+        
+        max-width: 100%; /* Ancho máximo del carrusel en dispositivos pequeños */
+        max-height: 100%;
+    }
+    /*[--Footer--]*/
+    .redes-sociales img {
+        width: 30px;
+        height: auto;
+      }
+      .derechos-reservados span {
+        margin-right: 9px;
+        font-size: 11px;
+      }
+
+}
+@media (max-width: 415px) {
+
+  body{
+    background-repeat: repeat;
+  }
+  /*[--Footer--]*/
+  .redes-sociales img {
+    width: 21px;
+    height: auto;
+  }
+  .logo {
+    padding-top: 4%;
+    margin-right: 50%;
+  }
+  h1 {
+    margin-bottom: 3%;
+    margin-left: 14%;
+    font-size: 16px;
+  }
+  #video{
+    width: 90%;
+    height: auto;
+  }
+  span{
+    color: #ffffff;
+    font-size: 10px;
+    text-align: center;
+    font-family: stencil;
+  }
+  
+  img{
+    height: 300px;
+    margin-left: 15%;
+  }
+  .container {
+    display:inline;
+    justify-content: initial;
+  }
+
+  .carrusel {
+    padding-top: 1%;
+    height: 100%;
+    max-width: 1200px; /* Puedes ajustar el ancho máximo según tus necesidades */
+    margin: 0 38%; /* Centrar horizontalmente */
+    overflow: initial; /* Ocultar desbordamiento */
+    margin-top: 20px;
+  }
+
+  p{
+    margin-top: 5%;
+    font-size: 18px;
+    width: 350px;
+  }
+.espacio{
+  height: 150px;
+}
+  
+  }

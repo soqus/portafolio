@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url(/images/DONDON\ BANNER-2.jpg);
+    background-repeat: no-repeat;
+    background-position:right;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgba(0, 0, 0, 0.2); /* Cambia el valor de opacidad según lo necesites */
+  z-index: -1; /* Colocar el pseudo-elemento detrás del contenido del body */
+}
+h1{
+  color: white;
+  padding-right: 20%;
+  font-family: stencil;
+  letter-spacing: 10px;    
+}
+span{
+color: #ffffff;
+font-size: 20px;
+text-align: center;
+font-family: stencil;
+}
+/*[--menu superior--]*/
+header {
+    height: 10vh;
+    /* 10% de la altura de la ventana gráfica */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #202020;
+    /* Color de fondo del menú */
+    padding: 0 20px;
+    /* Espacio interno alrededor del contenido */
+}
+
+.logo {
+    flex: 1;
+    /* El logo ocupa todo el espacio posible */
+}
+
+.logo img {
+    padding-top: 1%;
+    height: 5rem;
+    /* El logo se ajusta a la altura del menú */
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+    /* Espacio entre los enlaces */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    /* Color del texto de los enlaces */
+}
+
+
+/*ABOUT*/
+.container{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0,);
+  margin: 2% 0% 2% 5%;
+  border-radius: 1rem;
+  width: 90%;
+}
+
+p{
+  color: #ffffff;
+  margin: 1%;
+  font-size: 13px;
+padding-bottom: 3px;
+text-align: justify;
+}
+.p1{
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 1%;
+  margin-left: 2%;
+  border-radius: 1rem;
+}
+.p2{
+  margin-left: 3%;
+  margin-top: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+  /*[--Footer--]*/
+
+  footer {
+    background-color: #202020;
+    color: #ffffff;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+  }
+  
+  .redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .redes-sociales img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .derechos-reservados {
+    display: flex;
+    align-items: center;
+  }
+  
+  .derechos-reservados span {
+    margin-right: 9px;
+    font-size: 14px;
+  }
+  
+  .derechos-reservados span:last-child {
+    font-size: 12px;
+  }
+  @media (max-width: 1280){
+    .p1{
+      font-size: 8;
+    }
+
+  }
+  /* Estilos para hacerlo responsivo */
+@media (max-width: 768px) {
+    /*[--Menu superior--]*/
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        padding-top: 3%;
+    }
+    h1{
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+    body{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    }
+
+    .logo {
+        padding-top: 4%;
+        margin-bottom: 10px;
+        margin-left: 42%;
+    }
+
+    nav {
+        order: -1;
+        /* Colocar la navegación arriba en dispositivos pequeños */
+    }
+
+    .imagen-pequena {
+      width: 100vw; /* Ajusta el porcentaje según el tamaño deseado */
+      margin: 20% 0%;
+    }
+
+     /*[--Footer--]*/
+     .redes-sociales img {
+        width: 30px;
+        height: auto;
+      }
+      .derechos-reservados span {
+        margin-right: 9px;
+        font-size: 11px;
+      }
+}
+
+@media (max-width: 415px) {
+/*[--Footer--]*/
+body{
+background-repeat: repeat;
+}
+.redes-sociales img {
+  width: 21px;
+  height: auto;
+}
+.logo {
+  padding-top: 4%;
+  margin-left: 42%;
+}
+h1 {
+  margin-left: 16%;
+  margin-bottom: 1%;
+  font-size: 25px;
+}
+.container {
+  display:inline;
+  justify-content: initial;
+}
+.p2{
+ padding-bottom: 30%;
+}
+}
